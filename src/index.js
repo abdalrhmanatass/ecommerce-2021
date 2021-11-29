@@ -7,4 +7,9 @@ import "./css/style.css";
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
+  $(".add-to-card-btn").click(function () {
+    alert("اضافة العنصر الى العربة")
+  })
+
+  $('#copyright').text("جميع الحقوق محفوظة للمتجر سنة " + new Date().getFullYear())
 });

@@ -137,7 +137,7 @@ Featured Products
 *******************************************************
 ********************************************************
 **********************************************************/
-.custom-row .col-12 {
+.custom-row > .col-12 {
   padding: 0;
 }
 #carousel_Featured {
@@ -156,6 +156,7 @@ Featured Products
   position: relative;
   top: 50px;
   height: 200px;
+  background-color: #f7f8f3;
 }
 
 #carousel_Featured .product-details .product-category {
@@ -227,4 +228,448 @@ Featured Products
 #carousel_Featured .carousel-control-prev svg,
 #carousel_Featured .carousel-control-next svg {
   color: #919191;
+}
+/******************************************************
+********************************************************
+*******************************************************
+Store features
+*******************************************************
+********************************************************
+**********************************************************/
+#store-features {
+  box-shadow: 0 0 15px #eef0ea;
+  top: -30px;
+  position: relative;
+  background-color: #fff;
+  background-image: url(../images/bg_features.png);
+  background-repeat: no-repeat;
+  padding-bottom: 35px;
+  padding-top: 25px;
+  background-position: -10px -20px;
+}
+.custom-heading {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+#store-features .feature img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+#store-features .feature + .feature {
+  border-right: 1px solid #eef0ea;
+}
+
+/******************************************************
+********************************************************
+*******************************************************
+Most Sold
+*******************************************************
+********************************************************
+**********************************************************/
+
+.custom-thumnail {
+  border: 2px solid #eef0ea;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+.custom-thumnail:hover {
+  border-color: #53ccd7;
+}
+.custom-thumnail img {
+  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+.custom-thumnail .card-body {
+  padding: 9px;
+}
+.custom-thumnail h4 {
+  font-size: 18px;
+  padding-top: 10px;
+}
+.custom-thumnail .price {
+  padding-top: 10px;
+}
+.price {
+  color: #53ccd7;
+}
+.rating {
+  color: #c2c2c2;
+}
+.rating .active {
+  color: #f3af41;
+}
+.custom-thumnail .overlay {
+  position: absolute;
+  background-color: rgba(83, 204, 215, 0.5);
+  height: 250px;
+  width: calc(100% - 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.custom-thumnail .overlay:hover {
+  opacity: 1;
+}
+.custom-thumnail .add-to-card-btn {
+  background-color: #fff;
+  color: #19becd;
+  font-weight: bold;
+}
+
+.custom-thumnail .add-to-card-btn:hover,
+.custom-thumnail .add-to-card-btn:active,
+.custom-thumnail .add-to-card-btn:focus,
+.custom-thumnail .add-to-card-btn:active:focus,
+.custom-thumnail .add-to-card-btn:active:hover {
+  color: #000;
+}
+
+.custom-thumnail .sale {
+  padding: 5px 10px;
+  position: absolute;
+  left: 16px;
+  top: 14px;
+}
+.custom-carousel-indicators > li {
+  height: 13px;
+  width: 13px;
+  margin: 2px;
+  background-color: #bdbdbd;
+}
+.custom-carousel-indicators > li.active {
+  background-color: #565656;
+}
+
+#carousel_most_sold .carousel-indicators {
+  position: static;
+}
+
+/******************************************************
+********************************************************
+*******************************************************
+Worldwide Trademark
+*******************************************************
+********************************************************
+**********************************************************/
+#row-brands .custom-heading {
+  border-top: 1px solid #eef0ea;
+  padding-top: 25px;
+}
+.brand-products {
+  margin-bottom: 20px;
+}
+.brand-products .brand-nav {
+  margin-top: 14px;
+}
+.custom-panel {
+  border: 4px solid #eef0ea;
+  border-radius: 2px;
+  box-shadow: none;
+  padding: 20px;
+}
+.custom-panel .product-img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.custom-btn-primary {
+  color: #f8ad47;
+  border-color: #f8ad47;
+  background-color: transparent;
+}
+.custom-btn-primary:hover,
+.custom-btn-primary:focus,
+.custom-btn-primary:active,
+.custom-btn-primary:active:focus,
+.custom-btn-primary:active:hover {
+  color: #b86d07;
+  border-color: #b86d07;
+  background-color: transparent;
+}
+.custom-panel h4,
+.custom-panel .price {
+  font-size: 130%;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.custom-text-muted {
+  color: #a9a9a9;
+}
+
+.custom-arrow-btn {
+  background-color: #fff;
+  color: #868686;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.brand-text {
+  display: inline-block;
+}
+/******************************************************
+********************************************************
+*******************************************************
+footer    
+*******************************************************
+********************************************************
+**********************************************************/
+#brand-logos {
+  background-color: #dbeefa;
+  padding: 20px 0;
+  color: #555;
+}
+#brand-logos img {
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 100px;
+  max-height: 100px;
+}
+#footer-nav {
+  background-color: #1f1e1e;
+  padding: 50px 0 40px;
+  background-image: url(../images/bg_footer_1.png),
+    url(../images/bg_footer_2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 110% 0, -10% -150%;
+}
+#footer-nav-links {
+  margin: 30px 0;
+}
+#footer-nav-links a {
+  color: #555;
+  margin-left: 30px;
+  font-weight: bold;
+}
+#footer-nav-links a:hover {
+  text-decoration: none;
+}
+#footer-nav #newsletter {
+  border-top: 1px solid #292929;
+}
+#footer-nav form {
+  max-width: 260px;
+  margin: auto;
+}
+
+#footer-nav form label {
+  margin: 27px 0 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+
+#newsletter input {
+  direction: rtl;
+  text-align: right;
+  background-color: #313131;
+  opacity: 0.6;
+  height: 38px;
+  border: none;
+}
+#footer-nav form button {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 6px 12px 5px;
+  font-size: 14px;
+  color: inherit;
+}
+.custom-btn-primary-2 {
+  color: #000;
+  background-color: #f8ad47;
+  border-color: #f8ad47;
+}
+
+.custom-btn-primary-2:hover,
+.custom-btn-primary-2:active,
+.custom-btn-primary-2:focus,
+.custom-btn-primary-2:active:focus,
+.custom-btn-primary-2:active:hover {
+  background-color: #b86d07;
+  border-radius: #b86d07;
+  color: #000;
+}
+#footer-copyright-social {
+  background-color: #151515;
+  color: #303030;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+#footer-copyright-social a {
+  color: #303030;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/******************************************************
+********************************************************
+*******************************************************
+media query    
+*******************************************************
+********************************************************
+**********************************************************/
+
+@media (max-width: 1199px) {
+  /* nav-link */
+  nav.custom-navbar .navbar-nav li a.nav-link {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .custom-thumnail img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 991px) {
+  /*-_-_-_-_-_-_-_-_- navbar -_-_-_-_-_-_-_-_-*/
+  .custom-navbar {
+    padding: 15px 20px 30px;
+  }
+
+  .custom-navbar .container {
+    max-width: 100%;
+  }
+  /* icon-navbar */
+  .navbar-header {
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .navbar-header .btn-icon {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .custom-navbar a.btn-icon,
+  .custom-navbar button.btn-icon {
+    color: #777;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 5px 10px 4px;
+    background-color: transparent;
+    font-size: 18px;
+  }
+
+  /* search bar */
+  .form-inline {
+    width: 100%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  .form-inline .form-group {
+    width: 100%;
+  }
+  .form-inline .dropdown {
+    display: none;
+  }
+  .form-inline .custom-form-control {
+    width: 90%;
+  }
+  .form-inline .search-btn {
+    width: 10%;
+  }
+
+  /* navbar links */
+  .navbar-collapse {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 8px;
+  }
+
+  nav.custom-navbar .navbar-nav li a.nav-link {
+    padding: 10px 15px;
+  }
+  /*-_-_-_-_-_-_-_-_- Featured Products -_-_-_-_-_-_-_-_-*/
+  .carousel-indicators {
+    margin-right: 1%;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .custom-thumnail .add-to-card-btn {
+    background-color: #fff;
+    color: #868686;
+    font-weight: normal;
+  }
+  /*-_-_-_-_-_-_-_-_- footer copyright -_-_-_-_-_-_-_-_-*/
+  #copyright,
+  #social-icons {
+    width: 100%;
+    text-align: center;
+  }
+  #social-icons {
+    font-size: 150%;
+  }
+}
+
+@media (max-width: 767px) {
+  /*-_-_-_-_-_-_-_-_- Featured Products -_-_-_-_-_-_-_-_-*/
+
+  #carousel_Featured,
+  #carousel_Featured .product-details {
+    height: auto;
+  }
+  #carousel_Featured {
+    padding-bottom: 25px;
+  }
+  #carousel_Featured .product-details {
+    position: static;
+    text-align: center;
+  }
+  #carousel_Featured .carousel-item img {
+    height: 250px;
+  }
+
+  /*-_-_-_-_-_-_-_-_- footer brand-logos -_-_-_-_-_-_-_-_-*/
+  #brand-logos img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 5px 24px 5px 23px;
+  }
+  #footer-nav .footer-logo {
+    margin-bottom: 30px;
+  }
+  #footer-nav form {
+    max-width: 99%;
+    width: 99%;
+    margin: auto;
+  }
+  #newsletter form .input-group {
+    width: 99%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  /* search bar */
+  .form-inline .custom-form-control {
+    width: 80%;
+    display: inline;
+  }
+  .form-inline .search-btn {
+    width: 19%;
+  }
+  /*-_-_-_-_-_-_-_-_- Featured Products -_-_-_-_-_-_-_-_-*/
+
+  #carousel_Featured .carousel-item {
+    padding: 0 18px;
+  }
+
+  #footer #brand-logo .img-container img {
+    margin: 5px 15px;
+  }
 }
