@@ -8,8 +8,14 @@ import "./css/style.css";
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
   $(".add-to-card-btn").click(function () {
-    alert("اضافة العنصر الى العربة")
-  })
+    alert("اضافة العنصر الى العربة");
+  });
 
-  $('#copyright').text("جميع الحقوق محفوظة للمتجر سنة " + new Date().getFullYear())
+  $("#copyright").text(
+    "جميع الحقوق محفوظة للمتجر سنة " + new Date().getFullYear()
+  );
+  $('.product-option input[type="radio"]').change(function () {
+    $(this).parents(".product-option").siblings().removeClass("active");
+    $(this).parents(".product-option").addClass("active");
+  });
 });
