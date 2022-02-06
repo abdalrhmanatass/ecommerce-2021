@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>متجر عربي || عربة الشراء</title>
+    <title>متجر عربي || اتمام عملية الشراء</title>
   </head>
 
   <body>
@@ -158,22 +158,211 @@
       </nav>
     </div>
     <!-- END navbar -->
+
     <div class="container">
-      <!-- navigational elements -->
+      <!-- Start Navigation sub-elements -->
       <div class="row">
         <ol class="breadcrumb custom-breadcrumb">
           <li>
             <a href=".">الصفحة الرئيسية</a>
           </li>
-          <li class="active">عربة الشراء</li>
+          <li>
+            <a href=".">عربة الشراء</a>
+          </li>
+          <li class="active">الدفع</li>
         </ol>
       </div>
-      <!-- END navigational elements -->
-      <div class="border_between">
-        <!--  -->
-        <div class="row flex-column">
+      <!-- END Navigation sub-elements -->
+
+      <form id="form-checkout">
+        <!-- Start Payment Form -->
+        <div class="row">
+          <!-- Start Personal data -->
+          <div class="col-lg-6 col-12">
+            <h3 class="custom-heading">البيانات الشخصية</h3>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <!-- first_name -->
+                <input
+                  type="text"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="الاسم الاول"
+                  name="first_name"
+                  required
+                />
+              </div>
+              <!-- last_name -->
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="الاسم الاخير"
+                  name="last_name"
+                  required
+                />
+              </div>
+              <!-- email -->
+              <div class="col-md-6 form-group">
+                <input
+                  type="email"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="البريد الالكتروني "
+                  name="email"
+                  required
+                />
+              </div>
+              <!-- Area -->
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="المنطقة"
+                  name="area"
+                  required
+                />
+              </div>
+              <!-- country -->
+              <div class="col-md-6 form-group">
+                <select
+                  name="country"
+                  class="form-control custom-form-control custom-input-details"
+                  required
+                >
+                  <option disabled selected value="">اختر دولة</option>
+                  <option value="SA">السعودية</option>
+                  <option value="EG">مصر</option>
+                  <option value="JO">الأردن</option>
+                  <option value="SY">سوريا</option>
+                </select>
+              </div>
+              <!-- City -->
+              <div class="col-md-6 form-group">
+                <select
+                  name="city"
+                  class="form-control custom-form-control custom-input-details"
+                  required
+                >
+                  <option disabled selected value="">اختر مدينة</option>
+                </select>
+              </div>
+              <!-- Phone -->
+              <div class="col-md-6 form-group">
+                <input
+                  type="number"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="رقم الموبايل"
+                  name="phone"
+                  required
+                />
+              </div>
+              <!-- Address1 -->
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="العنوان الاول"
+                  name="address1"
+                  required
+                />
+              </div>
+              <!-- Address2 -->
+              <div class="col-md-6 form-group">
+                <input
+                  type="text"
+                  class="form-control custom-form-control custom-input-details"
+                  placeholder="العنوان الثاني"
+                  name="address2"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- END Personal Data -->
+
+          <!-- Start Payment Data -->
+          <div class="col-lg-6 col-12">
+            <h3 class="custom-heading">بيانات الدفع</h3>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="payment_method"
+                    checked
+                    value="credit_card"
+                  />
+                  الدفع ب البطاقة الأتمانية
+                </label>
+              </div>
+              <div class="col-md-6 form-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="payment_method"
+                    value="on_delivary"
+                  />
+                  الدفع عند الاستلام
+                </label>
+              </div>
+
+              <!-- credit-card-info -->
+              <div class="row" id="credit-card-info">
+                <!-- credit_card_name -->
+                <div class="col-md-6 form-group">
+                  <input
+                    class="form-control custom-form-control custom-input-details"
+                    type="text"
+                    name="credit_card_name"
+                    placeholder="رقم البطاقة"
+                    required
+                  />
+                </div>
+
+                <!-- credit_card_expiration_month -->
+                <div class="col-md-6 form-group">
+                  <input
+                    class="form-control custom-form-control custom-input-details"
+                    type="number"
+                    name="credit_card_expiration_month"
+                    placeholder="شهر الانتهاء"
+                    min="1"
+                    max="12"
+                    required
+                  />
+                </div>
+
+                <!-- credit_card_expiration_year -->
+                <div class="col-md-6 form-group">
+                  <input
+                    class="form-control custom-form-control custom-input-details"
+                    type="number"
+                    name="credit_card_expiration_year"
+                    placeholder="سنة الأنتهاء"
+                    min="2022"
+                    max="2030"
+                    required
+                  />
+                </div>
+
+                <!-- credit_card_cvv -->
+                <div class="col-md-6 form-group">
+                  <input
+                    class="form-control custom-form-control custom-input-details"
+                    type="number"
+                    name="credit_card_cvv"
+                    placeholder="CVV"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Payment Data -->
+        </div>
+        <!-- END Payment Form -->
+
+        <div class="col-12 flex-column">
           <div class="col-12">
-            <h1 class="custom-heading">عربة الشراء</h1>
+            <h3 class="custom-heading">طلبك</h3>
           </div>
           <div class="col-12">
             <form action="payment.html" method="get" id="form-checkout">
@@ -294,146 +483,7 @@
             </form>
           </div>
         </div>
-        <!--  -->
-
-        <!-- we suggested to you -->
-        <div class="row suggestions">
-          <h3 class="custom-heading col-12">اقترحنا لك</h3>
-          <div class="row">
-            <div class="col-lg-3 col-md-4">
-              <div class="card custom-thumnail">
-                <div class="overlay">
-                  <button class="btn btn-secondary custom-btn add-to-card-btn">
-                    أضافة للعربة
-                    <i class="fas fa-cart-plus"></i>
-                  </button>
-                </div>
-                <img src="./images/most_sold_2.jpg" alt="" />
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="float-right">فلورا تي شيرت</h4>
-                    <div class="price float-left">200$</div>
-                  </div>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="clearfix">
-                    <button
-                      class="float-left btn-secondary custom-btn add-to-card-btn d-block d-lg-none"
-                    >
-                      أضافة للعربة
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="card custom-thumnail">
-                <div class="overlay">
-                  <button class="btn btn-secondary custom-btn add-to-card-btn">
-                    أضافة للعربة
-                    <i class="fas fa-cart-plus"></i>
-                  </button>
-                </div>
-                <img src="./images/most_sold_1.jpg" alt="" />
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="float-right">شير بلوز من نافي</h4>
-                    <div class="price float-left">500$</div>
-                  </div>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="clearfix">
-                    <button
-                      class="float-left btn-secondary custom-btn add-to-card-btn d-block d-lg-none"
-                    >
-                      أضافة للعربة
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
-              <div class="card custom-thumnail">
-                <div class="sale">-50%</div>
-                <div class="overlay">
-                  <button class="btn btn-secondary custom-btn add-to-card-btn">
-                    أضافة للعربة
-                    <i class="fas fa-cart-plus"></i>
-                  </button>
-                </div>
-                <img src="./images/most_sold_3.jpg" alt="" />
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="float-right">جاكت أولادي</h4>
-                    <div class="price float-left">450$</div>
-                  </div>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="clearfix">
-                    <button
-                      class="float-left btn-secondary custom-btn add-to-card-btn d-block d-lg-none"
-                    >
-                      أضافة للعربة
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-4 d-none d-lg-block">
-              <div class="card custom-thumnail">
-                <div class="overlay">
-                  <button class="btn btn-secondary custom-btn add-to-card-btn">
-                    أضافة للعربة
-                    <i class="fas fa-cart-plus"></i>
-                  </button>
-                </div>
-
-                <img src="./images/hm_3.jpg" alt="" />
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="float-right">طقم للصغار</h4>
-                    <div class="price float-left">25$</div>
-                  </div>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="clearfix">
-                    <button
-                      class="float-left btn-secondary custom-btn add-to-card-btn d-block d-lg-none"
-                    >
-                      أضافة للعربة
-                      <i class="fas fa-cart-plus"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END we suggested to you -->
-      </div>
+      </form>
     </div>
 
     <!-- Start footer -->
