@@ -1,0 +1,33 @@
+@import "./_variable.scss";
+@import "./_custom-table";
+@import "./_mixins";
+@import "./_slider";
+@import "./_sale";
+@import "./custom";
+
+.custom-btn-primary {
+  @include btn-color($brand-primary);
+}
+
+.custom-btn-danger {
+  @include btn-color($brand-danger);
+}
+
+.search-btn {
+  background-color: #ff3956;
+  border-color: #ff3956;
+  color: #fff;
+  padding: 5px 15px 7px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0px;
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:hover,
+  &:active:focus {
+    background-color: $btn-danger-color-dark;
+    border-color: $btn-danger-color-dark;
+    color: #fff;
+  }
+}

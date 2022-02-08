@@ -1,8 +1,11 @@
+
 import "bootstrap/dist/js/bootstrap.min.js";
 import "jquery/dist/jquery.min.js";
 import "popper.js/dist/popper.min.js";
-import "@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css";
+// import "@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css";
+// import "@laylazi/bootstrap-rtl-scss/scss/bootstrap-rtl.scss";
 import "@fortawesome/fontawesome-free/js/all.min";
+import "./sass/stayle.scss"
 import "./css/style.css";
 import "webpack-jquery-ui";
 import "webpack-jquery-ui/css";
